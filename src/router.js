@@ -12,11 +12,7 @@ export default class RouterHandler {
       { path: '/', page: Stories},
     ];
 
-    routes.forEach(route => {
-      router.on(route.path, () => {
-        console.log(route.page());
-      }).resolve
-    });
+    routes.forEach(route => router.on(route.path, () => route.page()).resolve());
 
   }
 }
