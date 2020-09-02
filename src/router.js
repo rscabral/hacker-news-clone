@@ -15,8 +15,8 @@ export default class RouterHandler {
       { path: '/show', page: Stories },
     ];
 
-    routes.forEach(route => router.on(route.path, 
-      () => route.page(route.path)).resolve());
+    routes.forEach(({ path, page }) => router.on(path, 
+      () => page(path)).resolve());
 
   }
 }
