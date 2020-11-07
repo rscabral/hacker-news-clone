@@ -1,4 +1,5 @@
 import view from '../utils/view.js';
+import baseUrl from '../utils/baseUrl.js';
 import Story from '../components/Story.js';
 import pathMap from '../api/pathMap.js';
 
@@ -15,7 +16,7 @@ export default async function Stories(path) {
 async function getStories(path) {
   const apiPath = pathMap.get(path);  
   
-  const response = await fetch(`https://node-hnapi.herokuapp.com${apiPath}`);
+  const response = await fetch(`${baseUrl}${apiPath}`);
   const stories = await response.json();
 
   return stories;
