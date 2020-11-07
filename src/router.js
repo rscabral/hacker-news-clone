@@ -1,6 +1,6 @@
 import Stories from './pages/stories.js';
 
-const router = new Navigo(null, true, '#');
+const router = new Navigo(null, true, '#!');
 
 export default class RouterHandler {
   constructor() {

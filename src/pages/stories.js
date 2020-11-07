@@ -1,6 +1,6 @@
 import view from '../utils/view.js';
 import Story from '../components/Story.js';
-import pathMap from '../routes/pathMap.js';
+import pathMap from '../api/pathMap.js';
 
 export default async function Stories(path) {
   const stories = await getStories(path);  
